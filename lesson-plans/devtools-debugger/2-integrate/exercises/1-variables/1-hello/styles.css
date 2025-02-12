@@ -1,3 +1,8 @@
+#user-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .computery {
   font-family: monospace;
   color: chartreuse;

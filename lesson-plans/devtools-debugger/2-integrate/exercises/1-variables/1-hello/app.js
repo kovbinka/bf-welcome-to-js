@@ -10,15 +10,32 @@ whenFormDataChanges('user-info', () => {
 
   console.log('\n--- form data changed ---');
 
-  // --- read user input ---
+  // --- read user input name---
 
   let name = readString('the-name');
 
   console.log(name);
 
+  // --- read user input ---
+
+  let nameLast = readString('the-last-name');
+
+  console.log(nameLast);
+
   // --- create a message ---
 
-  let greeting = 'Hello ' + name + '!';
+  let greeting =
+    'Hello ' +
+    name +
+    ' ' +
+    nameLast +
+    '!' +
+    '\n' +
+    'Good bye ' +
+    name +
+    ' ' +
+    nameLast +
+    '!';
 
   // --- display the message ---
 
