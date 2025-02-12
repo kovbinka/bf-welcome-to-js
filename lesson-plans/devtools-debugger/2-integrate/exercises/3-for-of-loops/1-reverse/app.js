@@ -28,19 +28,28 @@ whenFormDataChanges('reversify', () => {
 
   // --- set to upper or lower case ---
 
-  let finalText = '';
-  if (screaming) {
-    finalText = reversed.toUpperCase();
-  } else {
-    finalText = reversed.toLowerCase();
+  let textRegister = '';
+  if (text.length > 10) {
+    textRegister = reversed.toUpperCase();
+  } else if (text.length < 10) {
+    textRegister = reversed.toLowerCase();
   }
 
-  console.log(finalText);
+  console.log(textRegister);
+
+  // let finalText = '';
+  // if (screaming) {
+  //   finalText = reversed.toUpperCase();
+  // } else {
+  //   finalText = reversed.toLowerCase();
+  // }
+
+  // console.log(finalText);
 
   // --- display the final text ---
 
   // display the final text to the <pre> with id "out"
-  displayString('out', finalText);
+  displayString('out', textRegister);
 });
 
 /*  ===== Challenges =====

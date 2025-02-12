@@ -2,6 +2,7 @@ import {
   whenFormDataChanges,
   readString,
   displayString,
+  readBoolean,
 } from '../../../../../../lib/dom-io/index.js';
 
 whenFormDataChanges('input', () => {
@@ -12,17 +13,38 @@ whenFormDataChanges('input', () => {
   // --- read the user's input ---
 
   let userText = readString('to-mirror');
+  let dividerStar = readBoolean('divider-star');
+  let dividerAmp = readBoolean('divider-amp');
+  let dividerHyphen = readBoolean('divider-hyphen');
 
   // --- mirror the text ---
 
-  let mirrored = ' | ';
+  let newUserReversed = '';
   for (let char of userText) {
-    mirrored = char + mirrored + char;
+    newUserReversed = char.toUpperCase() + newUserReversed.toUpperCase();
   }
 
-  // --- display the result ---
+  let newUserText = '';
+  for (let char of userText) {
+    newUserText = newUserText + char;
+  }
 
-  displayString('output', mirrored);
+  let mainDivider = '';
+  if (dividerStar) {
+    mainDivider = '*';
+  } else {
+    if (dividerAmp) {
+      mainDivider = '&';
+    } else {
+      if (dividerHyphen) {
+        mainDivider = '-';
+      }
+    }
+  }
+
+  let finished = newUserReversed + ' ' + mainDivider + ' ' + newUserText;
+
+  displayString('output', finished);
 });
 
 /*  ===== Challenges =====
