@@ -5,22 +5,23 @@ import {
 } from '../../../../../../../lib/dom-io/index.js';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: ReferenceError  
+  message: DisplayString is not defined
 
-  location:
+  location: 47
 
-  life cycle:
+  life cycle: in execution phase
 
-  the mistake:
+  the mistake: variable DisplayString is not in a camelCase
 
   the fix(es):
 */
 
 whenFormDataChanges('sleep-info', () => {
   console.log('--- form data changed ---');
+  // debugger;
 
   // --- read user input ---
 
@@ -43,5 +44,5 @@ whenFormDataChanges('sleep-info', () => {
 
   // --- display the advice ---
 
-  DisplayString('advice-area', advice);
+  displayString('advice-area', advice);
 });

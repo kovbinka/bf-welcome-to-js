@@ -8,15 +8,15 @@
     'abcdef' -> 'too long'
 
   experiment 1
-    line:
-    why:
+    line: 19
+    why: input must be === to null and cannot = null
     trying:
 
 */
 
 let input = prompt('enter something 5 characters long');
 
-if ((input = null)) {
+if ((input === null)) {
   alert(':(');
 } else if (input.length < 5) {
   alert('too short');

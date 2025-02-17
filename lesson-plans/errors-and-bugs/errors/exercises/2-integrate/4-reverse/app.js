@@ -8,19 +8,20 @@ import {
 /*
   environment:
 
-  name:
-  message:
+  name: Uncaught TypeError
+  message: screaming is not iterable
 
-  location:
+  location: 35
 
-  life cycle:
+  life cycle: in execution phase
 
-  the mistake:
+  the mistake: variable `screaming` doesn't have a text inside, it's just a variable with the method who read Boolean
 
-  the fix(es):
+  the fix(es): in `for...of` loop write `text` instead of `screaming`. Variable `text` read inputed text from some user
 */
 
 whenFormDataChanges('reversify', () => {
+  // debugger;
   console.log('--- form data changed ---');
 
   // --- read user input ---
@@ -31,7 +32,7 @@ whenFormDataChanges('reversify', () => {
   // --- reverse the string input ---
 
   let reversed = '';
-  for (let character of screaming) {
+  for (let character of text) {
     reversed = character + reversed;
   }
 
