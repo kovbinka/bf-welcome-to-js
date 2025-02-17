@@ -20,9 +20,9 @@ while (text === null) {
   text = prompt('enter some text, it will be mirrored');
 }
 
-let mirrored = '|';
+let mirrored = ' | ';
 for (const character of text) {
-  mirrored = mirrored + character + mirrored;
+  mirrored = character + mirrored + character;
 }
 
 alert(mirrored);

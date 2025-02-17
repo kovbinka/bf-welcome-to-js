@@ -6,22 +6,22 @@ console.log('--- in execution phase ---');
 
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Failed to execute 'appendChild' on 'Node': Invalid left-hand side in assignment
 
-  location:
+  location: 25
 
-  life cycle:
+  life cycle: in creation phase
 
-  the mistake:
+  the mistake: it's a type and syntax error
 
-  the fix(es):
+  the fix(es): true is a constant value, it always remains true and cannot be overridden. I just need to reassign the variable
 */
 
 let isHappy = false;
 
-true = isHappy;
+isHappy = true;
 
 

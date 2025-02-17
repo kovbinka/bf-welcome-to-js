@@ -6,25 +6,25 @@ console.log('--- in execution phase ---');
 
 
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Failed to execute 'appendChild' on 'Node': Unexpected token
 
-  location:
+  location: 27
 
-  life cycle:
+  life cycle: in creation phase
 
-  the mistake:
+  the mistake: in `if...else` statement one condition is missing - else if
 
-  the fix(es):
+  the fix(es): add a condition else if into the line 27
 */
 
 let userName = 'indrogo';
 
 if (userName.length < 3) {
   console.log('too short');
-} else (userName.length < 5) {
+} else if (userName.length < 5) {
   console.log('just right');
 } else {
   console.log('too long');

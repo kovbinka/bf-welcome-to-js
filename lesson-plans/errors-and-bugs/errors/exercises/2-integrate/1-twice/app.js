@@ -6,18 +6,18 @@ import {
 } from '../../../../../../../lib/dom-io/index.js';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected identifier 'text'
 
-  location:
+  location: 33
 
-  life cycle:
+  life cycle: in execution phase
 
-  the mistake:
+  the mistake: variable repeated is not initialized
 
-  the fix(es):
+  the fix(es): initialize variable `repeated` with `=`
 */
 
 whenFormDataChanges('user-data', () => {
@@ -29,7 +29,7 @@ whenFormDataChanges('user-data', () => {
 
   // --- repeat the text ---
 
-  let repeated + text + '\n' + text;
+  let repeated = text + '\n' + text;
 
   // --- display the repeated text ---
 

@@ -3,20 +3,22 @@
 console.log('--- in execution phase ---');
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Failed to execute 'appendChild' on 'Node': Identifier 'tree' has already been declared
 
-  location:
+  location: 22
 
-  life cycle:
+  life cycle: in creation phase
 
-  the mistake:
+  the mistake: i just need to reassing var
 
-  the fix(es):
+  the fix(es): delete `let` in 22 line
 */
 
 let tree = 'oak';
 
-let tree = 'birch';
+tree = 'birch';
+
+console.log(tree)

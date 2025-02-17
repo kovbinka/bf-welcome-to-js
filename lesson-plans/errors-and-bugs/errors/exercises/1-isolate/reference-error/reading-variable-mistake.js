@@ -3,20 +3,20 @@
 console.log('--- in execution phase ---');
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: ReferenceError
+  message: Cannot access 'tomatoes' before initialization
 
-  location:
+  location: 20
 
-  life cycle:
+  life cycle: in creation phase
 
-  the mistake:
+  the mistake: variable is called rather than initialized
 
-  the fix(es):
+  the fix(es): move variable above first console.log line
 */
 
-console.log(tomatoes);
-
 let tomatoes = 'fresh';
+
+console.log(tomatoes);

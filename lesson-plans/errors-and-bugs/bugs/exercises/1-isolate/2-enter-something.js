@@ -9,8 +9,8 @@
     'JavaScript' -> 'you entered "JavaScript"'
 
   experiment 1
-    line:
-    why:
+    line: 22
+    why: we are re-assigning and not initializing
     trying:
 
 */
@@ -19,8 +19,7 @@ let message = '';
 
 let input = null;
 while (input === null || input.length === 0) {
-  const input = prompt('enter something');
-
+  input = prompt('enter something');
   message = 'you entered "' + input + '"';
 }
 
