@@ -1,11 +1,12 @@
 'use strict';
 
-__;
+let a = 'string';
 console.log(a);
 
 {
-  __;
+let a = 'house';
   console.log(a);
 }
 
-console.log(a);
+a = 'ball'
+console.log(a === 'ball');
