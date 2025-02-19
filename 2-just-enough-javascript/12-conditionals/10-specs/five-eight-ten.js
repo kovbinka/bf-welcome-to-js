@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -39,32 +37,39 @@
 console.log('--- begin program ---');
 
 /* --- gather user input --- */
+let input = prompt('write something and you will see the quest');
 
-let input = prompt(_);
-console.log('input:', input);
-
-/* --- declare initial output --- */
-
-let output = _;
-
-/* --- create final output --- */
-
-/* --- alert the result --- */
-
-console.log('output:', output);
-alert(output);
+/* --- checking which of the conditions will be applied. --- */
+if (input !== null) { // if user write something than this condition will start working
+  if (input === '') { // if user will click "OK" than this condition will start working
+    alert('not even close');
+  } else if (input.length < 5) { // checking if lenght of input is less than 5
+    alert('better');
+  } else if (input.length < 8) { // checking if lenght of input is less than 8
+    alert('almost there');
+  } else if (input.length < 10) { // checking if lenght of input is less than 10
+    alert('so close');
+  } else if (input.length === 10) { // checking if lenght of input is exactly 10
+    alert('perfect!');
+  } else { // checking if lenght of input is more than 10
+    alert('too long');
+  }
+} else {
+  alert(':('); // if user did not wrote something than this condition will start working
+  console.log(':(');
+}
 
 console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
         - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */

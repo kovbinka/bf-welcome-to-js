@@ -8,11 +8,11 @@
 
 */
 
-let weather = 'spring';
+// let weather = 'spring';
 // let weather = "summer";
 // let weather = "winter";
 // let weather = "fall";
-// let weather = "holidays";
+let weather = 'holidays';
 
 let clothingChoice = '';
 

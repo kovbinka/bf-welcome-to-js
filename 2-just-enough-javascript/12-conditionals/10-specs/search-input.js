@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -35,36 +33,45 @@
 
 console.log('--- begin program ---');
 
-/* --- gather user input --- */
+// ask the user for the first value to check for inclusion.
+let text = prompt('Enter the first value:');
 
-let text = prompt(_);
-console.log('text:', text);
+// ask the user for the second value to search within the first.
+let query = prompt('Enter the second value to search for:');
 
-let query = prompt(_);
-console.log('query:', query);
+// set the initial output, which will change based on conditions.
+let output = ':(';
 
-/* --- declare initial output --- */
+if (text !== null && query !== null) { // check if the input for either field was not canceled.
+    if (text === '' && query === '') { // check if both inputs are empty.
+        output = '"" includes ""';
+    } else if (text === '') { // check when the first value is empty but the second is not.
+        output = '"" does not include "' + query + '"';
+    } else if (query === '') { // check when the second value is empty but the first is not.
+        output = '"' + text + '" does include ""';
+    } else {
+        if (text.toLowerCase().includes(query.toLowerCase())) { // use toLowerCase() for case-insensitive comparison.
+            output = '"' + text + '" does include "' + query + '"';
+        } else {
+            output = '"' + text + '" does not include "' + query + '"';
+        }
+    }
+}
 
-let output = _;
-
-/* --- create final output --- */
-
-/* --- alert the result --- */
-
-console.log('output:', output);
+// show the result to the user via alert.
 alert(output);
 
 console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
         - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */

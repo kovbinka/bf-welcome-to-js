@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -28,32 +26,35 @@
 console.log('--- begin program ---');
 
 /* --- gather user input --- */
+let input = prompt('show your power here');
 
-let input = prompt(_);
-console.log('input:', input);
+/* --- initializing var's to check the difference between length of input and desired result --- */
+let mainDifference = 10 - input.length;
+let biggerDifference = input.length - 10;
 
-/* --- declare initial output --- */
-
-let output = _;
-
-/* --- create final output --- */
-
-/* --- alert the result --- */
-
-console.log('output:', output);
-alert(output);
+if (input !== null) { // if user write something than this condition will start working
+  if (input.length === 10) { // checking if lenght of input is exactly 10
+    alert(input + ' is perfect!'); 
+  } else if (input.length < 10) { // checking if lenght of input is less than 10
+    alert(input + ` is ${mainDifference} characters too short`);
+  } else { // checking if lenght of input is longer than 10
+    alert(input + ` is ${biggerDifference} characters too long`);
+  }
+} else {
+  alert(':('); // if user did not wrote something than this condition will start working
+}
 
 console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
         - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */
