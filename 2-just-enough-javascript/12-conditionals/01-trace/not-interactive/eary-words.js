@@ -1,14 +1,12 @@
-// #todo
-
 'use strict';
 
-let word = '';
+// let word = '';
 // let word = 'a';
 // let word = 'be';
 // let word = 'eat';
 // let word = 'ear';
 // let word = 'peat';
-// let word = 'bear';
+let word = 'bear';
 // let word = 'early';
 // let word = 'burly';
 // let word = 'pearly';
