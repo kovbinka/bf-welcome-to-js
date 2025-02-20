@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -14,7 +12,13 @@
 */
 
 // input <- ''
+let input = '';
 
+while(input !== 'hello'){
+  input = prompt('say "hello"');
+}
+
+alert('hello you too!');
 // WHILE: input !== 'hello'
 //   input <- prompt('say hello')
 // :END WHILE

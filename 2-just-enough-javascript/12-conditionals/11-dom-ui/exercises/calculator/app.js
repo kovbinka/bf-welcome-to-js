@@ -6,22 +6,29 @@ import {
 } from '../../../../../lib/dom-io/index.js';
 
 whenFormDataChanges('inputs', () => {
-  // debugger;
   console.log('--- form data changed ---');
 
-  // --- read the user's input ---
   let left = readNumber('left');
   let right = readNumber('right');
-
   let operator = readString('operator');
 
-  // --- calculate the result ---
+  let calculatingResult;
 
-  if (operator === +) {
-    let plusResult = left + right;
-    
+  if (operator === '+') {
+    calculatingResult = left + right;
+  } else if (operator === '-') {
+    calculatingResult = left - right;
+  } else if (operator === '*') {
+    calculatingResult = left * right;
+  } else if (operator === '/') {
+    if (right === 0) {
+      calculatingResult = 'Error: division by zero';
+    } else {
+      calculatingResult = left / right;
+    }
+  } else {
+    calculatingResult = 'Invalid operator';
   }
 
-  // --- display the result ---
-  displayString('result',);
+  displayString('result', calculatingResult.toString());
 });

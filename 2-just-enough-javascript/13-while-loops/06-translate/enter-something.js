@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -16,6 +14,11 @@
 /* ---   ?   --- */
 
 // input <- null
+let input = null;
+
+while (input === null) {
+  input = prompt('input something');
+}
 
 // WHILE: input === null
 //   input <- prompt('enter something')
@@ -24,6 +27,14 @@
 /* ---   ?   --- */
 
 // output <- ''
+let output = '';
+if (input === '') {
+  output = 'you entered nothing :(';
+} else {
+  output = 'thank you for something';
+}
+
+alert(output);
 
 // IF: input === ''
 //   output <- 'you entered nothing :('

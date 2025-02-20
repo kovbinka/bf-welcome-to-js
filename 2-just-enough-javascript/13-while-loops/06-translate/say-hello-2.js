@@ -12,6 +12,11 @@
 */
 
 /* ---   ?   --- */
+let input = null;
+
+while (input === null){
+ input = prompt('say hello');
+}
 
 // input <- null
 // WHILE: input === null
@@ -19,6 +24,14 @@
 // :END WHILE
 
 /* ---   ?   --- */
+let message = '';
+if (input === 'hello'){
+  message = 'hello you too!';
+} else {
+  message = 'good bye';
+}
+
+alert(message);
 
 // message <- ''
 // IF: input === 'hello'

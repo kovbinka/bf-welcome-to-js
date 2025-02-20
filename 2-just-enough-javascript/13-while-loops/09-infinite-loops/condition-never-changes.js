@@ -1,11 +1,9 @@
-// #todo
-
 'use strict';
 
 let word = 'hello';
 
 while (word.length < 10) {
-  word + '!';
+  word += '!';
   console.log(word);
 }
 
