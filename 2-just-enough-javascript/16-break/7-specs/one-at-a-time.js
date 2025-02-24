@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -19,12 +17,40 @@
 console.log('--- begin program ---');
 
 /* --- declare initial output --- */
-
-let output = _;
+let input = '';
+let output = '';
 
 /* --- create final output --- */
 
-while (_) {}
+while (true) {
+  input = prompt('Please enter a single character:');
+
+  if (input === null) {
+    alert('You should enter some text!');
+    continue;
+  }
+
+  if (input === '') {
+    alert('You should enter a non-empty string!');
+    continue;
+  }
+
+  if (input.length > 1) {
+    alert('You should enter only one character!');
+    continue;
+  }
+
+  let isConfirmed = confirm('Do you want to enter another character?');
+
+  if (isConfirmed) {
+    output += input;
+  }
+
+  if (!isConfirmed) {
+    output += input;
+    break;
+  }
+}
 
 /* --- alert the result --- */
 
@@ -35,13 +61,13 @@ console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
       - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */

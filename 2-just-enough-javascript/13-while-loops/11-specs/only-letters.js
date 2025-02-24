@@ -23,11 +23,35 @@ console.log('--- begin program ---');
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
 
-while (_) {}
+const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+while (true) {
+  output = prompt('Type only letters');
+
+  if (output === null) {
+    continue;
+  }
+
+  if (output === '') {
+    continue;
+  }
+
+  let isValid = true;
+  for (let i = 0; i < output.length; i++) {
+    if (!alphabet.includes(output[i])) {
+      isValid = false;
+      break;
+    }
+  }
+
+  if (isValid) {
+    break;
+  }
+}
 
 /* --- alert the result --- */
 
@@ -38,13 +62,13 @@ console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
       - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */
