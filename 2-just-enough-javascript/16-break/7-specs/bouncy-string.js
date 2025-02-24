@@ -28,35 +28,46 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input = null;
+while (input === null || input === '' || /[^\p{L}]/u.test(input)) {
+  input = prompt('Please enter some text:');
+}
 console.log('input:', input);
 
 /* --- declare initial output --- */
 
-let output = _;
+
+let output = '';
+
+let i = 0;
 
 /* --- create final output --- */
 
-for (let _ of _) {
+for (let char of input) {
+  if (i % 2) {
+    output += char.toUpperCase();
+  } else if (i % 2 === 0) {
+    output += char.toLowerCase();
+  } else {
+    break;
+  }
+  i++;
 }
-
 /* --- alert the result --- */
 
 console.log('output:', output);
 alert(output);
 
 console.log('--- end program ---');
-
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
       - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */

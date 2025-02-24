@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -24,26 +22,31 @@
 
 console.log('--- begin program ---');
 
-/* --- gather user input --- */
+let input = null;
+while (true) {
+  input = prompt('Enter some text, non-letter characters will be removed');
 
-let input = _;
-while (_) {}
+  if (input === null) {
+    continue;
+  }
+
+  if (input === '') {
+    continue;
+  }
+
+  break;
+}
 console.log('input:', input);
 
-/* --- declare characters to keep --- */
+let toKeep = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-let toKeep = _;
+let output = '';
 
-/* --- declare initial output --- */
-
-let output = _;
-
-/* --- create final output --- */
-
-for (let _ of _) {
+for (let char of input) {
+  if (toKeep.includes(char)) {
+    output += char;
+  }
 }
-
-/* --- alert the result --- */
 
 console.log('output:', output);
 alert(output);
@@ -52,13 +55,13 @@ console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
       - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */

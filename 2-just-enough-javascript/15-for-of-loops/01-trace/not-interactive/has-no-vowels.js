@@ -1,19 +1,17 @@
-// #todo
-
 'use strict';
 
-let letters = 'xyz';
+// let letters = 'xyz';
 // let letters = 'aeiou';
 // let letters = 'zaei';
 // let letters = 'aeiz';
 // let letters = 'xyza';
-// let letters = 'axyz';
+let letters = 'axyz';
 // let letters = '';
 
 let noVowels = true;
 
 for (let letter of letters) {
-  if ('aeiou'.includes(letter)) {
+  if ('axyz'.includes(letter)) {
     noVowels = false;
   }
 }

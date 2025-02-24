@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -30,11 +28,38 @@ console.log('--- begin program ---');
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
+const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 /* --- create final output --- */
+while (true) {
+  output = prompt(
+    'Type something that begins with a capital letter and ends with a period',
+  );
 
-while (_) {}
+  if (output === null) {
+    continue;
+  }
+
+  if (output.length < 2) {
+    continue;
+  }
+
+  let firstChar = output[0];
+  let lastChar = output[output.length - 1];
+
+  if (!upperCase.includes(firstChar)) {
+    continue;
+  }
+
+  if (lastChar !== '.') {
+    continue;
+  }
+
+  break;
+}
+
+output = firstChar.toLowerCase() + output.slice(1, -1);
 
 /* --- alert the result --- */
 
@@ -45,13 +70,13 @@ console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
       - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */

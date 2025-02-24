@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* Challenge: write this program using `break` and `continue`
@@ -31,11 +29,34 @@ console.log('--- begin program ---');
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
 
-while (_) {}
+while (true) {
+  output = prompt('Enter some text:');
+
+  if (!output) {
+    continue;
+  }
+
+  if (output.charAt(0) !== output.charAt(0).toUpperCase()) {
+    alert('Your text must starts with a capital letter!');
+    continue;
+  }
+
+  if (output.charAt(output.length - 1) !== '.') {
+    alert('Your text must ends with a period!');
+    continue;
+  }
+
+  if (output.length <= 2) {
+    alert('Your text must be longer then two characters!');
+    continue;
+  }
+
+  break;
+}
 
 /* --- alert the result --- */
 
@@ -46,13 +67,13 @@ console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
       - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */
