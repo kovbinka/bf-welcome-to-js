@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -24,24 +22,24 @@ alert(
     '- player 2: says something cool about it',
 );
 
-let _a = null;
-while (_a === null) {
-  _a = prompt('enter an animal');
+let input = null;
+while (input === null) {
+  input = prompt('enter an animal');
 }
 
-let _b = '';
+let result = '';
 
-let _c = false;
-while (!_c) {
-  _b = prompt('tell me something about ' + _a);
+let isWorking = false;
+while (isWorking) {
+  result = prompt('tell me something about ' + input);
 
-  if (_b === '' || _b === null) {
+  if (result === '' || result === null) {
     alert('that is not something');
-  } else if (_b.toLowerCase().includes(_a.toLowerCase())) {
-    _c = true;
+  } else if (result.toLowerCase().includes(input.toLowerCase())) {
+    isWorking = true;
   } else {
-    alert('nope, not about ' + _a + '.  try again.');
+    alert('nope, not about ' + input + '.  try again.');
   }
 }
 
-alert('i just learned something cool about ' + _a + '!\n\n- "' + _b + '"');
+alert('i just learned something cool about ' + input + '!\n\n- "' + result + '"');

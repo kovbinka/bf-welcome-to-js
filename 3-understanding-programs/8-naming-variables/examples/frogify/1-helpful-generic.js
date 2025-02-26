@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* generic
@@ -19,25 +17,25 @@
 
 */
 
-let input = null;
-while (input === null) {
-  input = prompt(
+let _a = null;
+while (_a === null) {
+  _a = prompt(
     'enter some text to frogify.\n' +
       '- "f" will be replaced with "frog"\n' +
       '- "F" will be replaced with "FROG"',
   );
 }
 
-let output = '';
+let _b = '';
 
-for (const next of input) {
-  if (next === 'f') {
-    output = output + 'frog';
-  } else if (next === 'F') {
-    output = output + 'FROG';
+for (const _c of _a) {
+  if (_c === 'f') {
+    _b = _b + 'frog';
+  } else if (_c === 'F') {
+    _b = _b + 'FROG';
   } else {
-    output = output + next;
+    _b = _b + next;
   }
 }
 
-alert(output);
+alert(_b);

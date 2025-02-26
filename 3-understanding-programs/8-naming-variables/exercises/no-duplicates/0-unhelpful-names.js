@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -18,21 +16,21 @@
 
 */
 
-let _a = null;
-while (_a === null) {
-  _a = prompt('enter something with no duplicate characters');
+let align = null;
+while (align === null) {
+  align = prompt('enter something with no duplicate characters');
 }
 
-let _b = '';
-for (let _c of _a) {
-  let _d = _b.includes(_c);
-  if (_d) {
+let both = '';
+for (let circle of align) {
+  let did = both.includes(circle);
+  if (did) {
     break;
   }
-  _b = _b + _c;
+  both = both + circle;
 }
 
-if (_b.length === _a.length) {
+if (both.length === align.length) {
   alert('well done!');
 } else {
   alert('too bad, try again');

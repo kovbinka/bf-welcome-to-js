@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -18,20 +16,20 @@
 
 */
 
-let _a = null;
-while (_a === null) {
-  _a = prompt('enter some text, the program will check if it is only vowels');
+let animal = null;
+while (animal === null) {
+  animal = prompt('enter some text, the program will check if it is only vowels');
 }
 
-let _b = 'aeiou';
+let bloom = 'aeiou';
 
-let _c = true;
-for (let _d of _a) {
-  let _e = _b.includes(_d.toLowerCase());
-  if (!_e) {
-    _c = false;
+let current = true;
+for (let decimal of animal) {
+  let email = bloom.includes(decimal.toLowerCase());
+  if (!email) {
+    current = false;
     break;
   }
 }
 
-alert(_c);
+alert(current);

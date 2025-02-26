@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -20,7 +18,8 @@ for (const next of phrase) {
   if (next !== previous) {
     noRepetitions = noRepetitions + next;
   }
-  previous = next;
+  previous = next; 
 }
 
+console.log(noRepetitions); // log
 alert(noRepetitions);

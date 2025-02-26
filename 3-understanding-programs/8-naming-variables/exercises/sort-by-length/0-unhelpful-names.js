@@ -1,21 +1,17 @@
-// #todo
-
 'use strict';
 
 /*
   _a:
     declaration:
-      init:
-      types:
-      scopes:
+      init: 'short:'
+      types: string
+      scopes: global
     reads:
-      scopes:
-      checks:
+      scopes: global (inside while loop)
+      checks: none directly, but used in final alert
     assignments:
-      types:
-      scopes:
-
-
+      types: string
+      scopes: global (inside while loop when _e.length < 5)
 */
 
 alert(

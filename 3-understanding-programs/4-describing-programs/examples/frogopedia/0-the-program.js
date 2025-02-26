@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* 0. The Program

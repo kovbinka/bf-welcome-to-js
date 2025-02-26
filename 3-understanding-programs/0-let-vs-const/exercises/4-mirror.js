@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 // use `const` for every variable that is never reassigned

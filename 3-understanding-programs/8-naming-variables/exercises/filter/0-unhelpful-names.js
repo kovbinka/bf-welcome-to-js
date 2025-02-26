@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -18,17 +16,17 @@
 
 */
 
-let _a = null;
-while (_a === null) {
-  _a = prompt('enter some text, the program will remove all vowels');
+let astronaut = null;
+while (astronaut === null) {
+  astronaut = prompt('enter some text, the program will remove all vowels');
 }
 
-let _b = '';
-for (let _c of _a) {
-  let _d = 'aeiou'.includes(_c.toLowerCase());
-  if (!_d) {
-    _b = _b + _c;
+let bounced = '';
+for (let cool of astronaut) {
+  let door = 'aeiou'.includes(cool.toLowerCase());
+  if (!door) {
+    bounced = bounced + cool;
   }
 }
 
-alert(_b);
+alert(bounced);

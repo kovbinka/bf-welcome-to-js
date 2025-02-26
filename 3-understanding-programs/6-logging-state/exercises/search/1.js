@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -12,7 +10,7 @@ let phrase = '';
 let userConfirmedPhrase = false;
 while (!userConfirmedPhrase) {
   phrase = prompt('enter a phrase to search');
-  if (phrase === null) {
+  if (phrase === null) { // invalid input = null
     continue;
   }
 
@@ -28,7 +26,7 @@ while (!userConfirmedQuery) {
   query = prompt(
     'enter a search query, this program will check if it exists in your phrase',
   );
-  if (query === null) {
+  if (query === null) { // invalid input = null
     continue;
   }
 

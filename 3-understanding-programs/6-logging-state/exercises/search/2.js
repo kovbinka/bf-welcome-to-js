@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -9,7 +7,7 @@
   log whether or not the query was found in their phrase
 */
 
-let phrase = '';
+let phrase = ''; // user's phrase will be here
 
 let userConfirmedPhrase = false;
 while (!userConfirmedPhrase) {
@@ -21,9 +19,9 @@ while (!userConfirmedPhrase) {
   userConfirmedPhrase = confirm('is this correct: "' + phrase + '"');
 }
 
-const caseSensitive = confirm('do you want a case-sensitive search?');
+const caseSensitive = confirm('do you want a case-sensitive search?'); // type of search
 
-let query = '';
+let query = ''; // search will be here
 
 let userConfirmedQuery = false;
 while (!userConfirmedQuery) {
@@ -37,7 +35,7 @@ while (!userConfirmedQuery) {
   userConfirmedQuery = confirm('is this correct: "' + query + '"');
 }
 
-let phraseIncludesQuery;
+let phraseIncludesQuery; // query was in the phrase or not
 if (caseSensitive) {
   phraseIncludesQuery = phrase.includes(query);
 } else {
@@ -46,7 +44,7 @@ if (caseSensitive) {
   phraseIncludesQuery = lowerCasePhrase.includes(lowerCaseQuery);
 }
 
-let doesOrNot = '';
+let doesOrNot = ''; // query was in the phrase or not - result will be here
 if (phraseIncludesQuery) {
   doesOrNot = 'does';
 } else {

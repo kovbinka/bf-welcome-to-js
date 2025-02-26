@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -40,11 +38,11 @@
 */
 
 // _a: declare, null
-let _a = null;
+let userInput = null;
 // _a: read
-while (_a === null) {
+while (userInput === null) {
   // _a: write, string or null
-  _a = prompt(
+  userInput = prompt(
     'enter some text to frogify.\n' +
       '- "f" will be replaced with "frog"\n' +
       '- "F" will be replaced with "FROG"',
@@ -52,29 +50,29 @@ while (_a === null) {
 }
 
 // _b: declare, string
-let _b = '';
+let result = '';
 
 // _c: declare, string
 // _a: read
-for (let _c of _a) {
+for (let character of userInput) {
   // _c: read
-  if (_c === 'f') {
+  if (character === 'f') {
     // _b: read
     // _b: write, string
-    _b = _b + 'frog';
+    result = result + 'frog';
   }
   // _c: read
-  else if (_c === 'F') {
+  else if (character === 'F') {
     // _b: read
     // _b: write, string
-    _b = _b + 'FROG';
+    result = result + 'FROG';
   } else {
     // _c: read
     // _b: read
     // _b: write, string
-    _b = _b + _c;
+    result = result + character;
   }
 }
 
 // _b: read
-alert(_b);
+alert(result);
