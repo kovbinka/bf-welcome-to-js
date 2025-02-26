@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -18,20 +16,20 @@
 
 */
 
-let _a = null;
-while (_a === null) {
-  _a = prompt('enter some text, can you guess what the program does?');
+let allow = null;
+while (allow === null) {
+  allow = prompt('enter some text, can you guess what the program does?');
 }
 
-let _b = '';
-for (let _c of _a) {
-  if ('aeiou'.includes(_c)) {
-    _b = _b + _c.toUpperCase();
-  } else if ('AEIOU'.includes(_c)) {
-    _b = _b + _c.toLowerCase();
+let buy = '';
+for (let core of allow) {
+  if ('aeiou'.includes(core)) {
+    buy = buy + core.toUpperCase();
+  } else if ('AEIOU'.includes(core)) {
+    buy = buy + core.toLowerCase();
   } else {
-    _b = _b + _c;
+    buy = buy + core;
   }
 }
 
-alert(_b);
+alert(buy);

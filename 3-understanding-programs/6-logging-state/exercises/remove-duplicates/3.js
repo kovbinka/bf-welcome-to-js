@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -16,10 +14,13 @@ while (phrase === null) {
 
 let previous = '';
 
-let noRepetitions = '';
+let noRepetitions = ''; // final result
+
 for (const next of phrase) {
-  if (next !== previous) {
+  if (next !== previous) { // if char is not previous then final result will be noRepetitions + next
     noRepetitions = noRepetitions + next;
+  } else {
+    console.log('Removed: ' + next); // logged
   }
   previous = next;
 }

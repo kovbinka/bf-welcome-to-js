@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -11,6 +9,7 @@
 let phrase = null;
 while (phrase === null) {
   phrase = prompt('enter a phrase');
+  console.log(phrase);
 }
 
 const keepLetters = confirm(
@@ -25,11 +24,14 @@ if (keepLetters) {
     if (letters.includes(character.toLowerCase())) {
       newPhrase = newPhrase + character;
     }
+    console.log(newPhrase); // log removing or keeping if it's letters
   }
 } else {
   for (const character of phrase) {
     newPhrase = newPhrase + character + character;
   }
+  console.log(newPhrase); // log repeat
 }
 
 alert(newPhrase);
+console.log(newPhrase); // log result

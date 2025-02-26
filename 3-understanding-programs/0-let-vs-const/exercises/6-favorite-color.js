@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 // use `const` for every variable that is never reassigned
@@ -7,7 +5,7 @@
 let message = 'your favorite color is ';
 
 while (true) {
-  let input = prompt('what is your favorite color?');
+  const input = prompt('what is your favorite color?');
 
   if (input === null) {
     alert('there is no escape');

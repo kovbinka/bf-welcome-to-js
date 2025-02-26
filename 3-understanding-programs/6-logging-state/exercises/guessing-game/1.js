@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -30,6 +28,7 @@ if (userInput === '-h') {
   let secretPhrase = '';
   while (secretPhrase === '') {
     secretPhrase = prompt('Player 1: enter a secret phrase');
+    console.log(secretPhrase); // log
   }
 
   if (secretPhrase === null) {
@@ -66,6 +65,7 @@ if (userInput === '-h') {
             'what do you think the secret phrase is?',
         );
       }
+      consol.log(guess) // log
 
       if (guess === null) {
         alert('good bye');
@@ -74,6 +74,7 @@ if (userInput === '-h') {
         alert('Congrats, you were right!\n\n');
       } else {
         winner = 'Player 1';
+        console.log(winner);
 
         const revealTheSecret = confirm(
           'Nope, not correct. \n\ndo you want to know the secret?',

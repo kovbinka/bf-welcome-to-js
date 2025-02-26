@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -20,29 +18,29 @@
 
 alert('you will need to enter strings with "e" in the right place');
 
-let _a = 0;
+let alone = 0;
 
-let _b = 'entries:';
+let ball = 'entries:';
 
 while (true) {
-  let _c = prompt('input a string with "e" at index ' + _a);
+  let cross = prompt('input a string with "e" at index ' + alone);
 
-  if (_c === null) {
-    let _d = confirm('are you sure you want to cancel?');
-    if (_d) {
+  if (cross === null) {
+    let during = confirm('are you sure you want to cancel?');
+    if (during) {
       break;
     } else {
       continue;
     }
   }
 
-  if (_c[_a] !== 'e') {
-    _b = _b + '\nx. "' + _c + '"';
+  if (cross[alone] !== 'e') {
+    ball = ball + '\nx. "' + cross + '"';
     break;
   }
 
-  _b = _b + '\n' + _a + '. "' + _c + '"';
-  _a = _a + 1;
+  ball = ball + '\n' + alone + '. "' + cross + '"';
+  alone = alone + 1;
 }
 
-alert('your score: ' + _a + '\n\n' + _b);
+alert('your score: ' + alone + '\n\n' + ball);
