@@ -21,3 +21,15 @@
       'jello' -> '"jello" is a short word'
       'hi' -> '"hi" is a short word'
 */
+
+let input = null;
+
+while(input === null || input === ''){
+  input = prompt('type something longer than 7 character');
+}
+
+if(input.length > 7){
+    alert("yep, it's a long word");
+  } else {
+    alert("no, this is too short");
+  }

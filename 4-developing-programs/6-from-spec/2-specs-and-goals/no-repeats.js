@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* No Repeats
@@ -29,15 +27,33 @@
       'abacada'     ->  '"abacada" has at least one repeat'
       'abcdefggg'   ->  '"abcdefggg" has at least one repeat'
       '.@@..@@.'    ->  '".@@..@@." has at least one repeat'
-
 */
 
 /* --- gather user input --- */
+let input = null;
+while (input === null) {
+  input = prompt('enter some text');
+}
 
 /* --- check if the input has any repeated characters --- */
-
 //  store the search results as a boolean
+let hasRepeats = false;
+let seenChars = '';
+for (const char of input) {
+  if (seenChars.includes(char)) {
+    hasRepeats = true;
+    break; // Exit loop once a repeat is found
+  }
+  seenChars = seenChars + char;
+}
 
 /* --- create a message for the user --- */
+let message;
+if (hasRepeats) {
+  message = '"' + input + '" has at least one repeat';
+} else {
+  message = '"' + input + '" has no repeats';
+}
 
 /* --- display the message to the user --- */
+alert(message);

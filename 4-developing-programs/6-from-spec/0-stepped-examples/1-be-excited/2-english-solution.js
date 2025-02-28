@@ -25,6 +25,25 @@
 //  Data Before:  the user's string
 //  Data After:   the same text with an exclamation mark
 
+
+let input = '';
+
+while (input === null || input === ''){
+  input = prompt('type something scary ;)');
+
+  if (input === null) {
+    alert(`let's comeback`);
+    continue;
+  }
+
+  if (input !== null && input !== ''){
+    input = input + "!";
+  }
+
+  alert(input);
+}
+
+
 /*
   add an exclamation mark to the end of the user's input
 */

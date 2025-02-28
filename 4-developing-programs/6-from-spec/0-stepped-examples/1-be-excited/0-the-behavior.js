@@ -12,3 +12,21 @@
     'JS'    -> 'JS!'
     'hello' -> 'hello!'
 */
+
+
+let input = '';
+
+while (input === null || input === ''){
+  input = prompt('type something scary ;)');
+
+  if (input === null) {
+    alert(`let's comeback`);
+    continue;
+  }
+
+  if (input !== null && input !== ''){
+    input = input + "!";
+  }
+
+  alert(input);
+}

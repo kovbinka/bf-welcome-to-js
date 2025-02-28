@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* https://eslint.org/docs/rules/eqeqeq
@@ -13,6 +11,6 @@
 let time = 'Future';
 let space = 'future';
 
-let timeIsSpace = time == space;
+let timeIsSpace = time === space;
 
 console.log(timeIsSpace);

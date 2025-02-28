@@ -53,7 +53,16 @@ console.log(input);
 //   message <- message + ' is a short word'
 // :END IF
 
+let message = ' " ' + input + ' " ';
+
+if (input.length >= 7){
+  message = message + 'is a long word';
+} else {
+  message = message + 'is a short word'
+}
+
 /* --- display the message for the user --- */
 // Data Out:    a message describing the string as long or short
 
 // alert(message)
+alert(message);

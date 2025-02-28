@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* Something with a Space
@@ -30,28 +28,28 @@
       ' a b c '       ->  '" a b c " has at least one space'
       ' h e l l o ! ' ->  '" h e l l o ! " has at least one space'
       ' Java Script ' ->  '" Java Script " has at least one space'
-
 */
 
 /* --- gather user input --- */
 //  Data In:      a string or null
-_;
+let input = prompt('enter some text');
 //  Data After:   the user's input (string or null)
 
 /* --- create a message for the user --- */
-
 //  Data Before:  the user's input (string or null)
-_;
-if (_) {
+let message;
+if (input === null) {
   /* --- the user canceled --- */
-} else if (_) {
+  message = 'why did you cancel?';
+} else if (input.includes(' ')) {
   /* --- the input has at least one space --- */
+  message = '"' + input + '" has at least one space';
 } else {
   /* --- the input has no spaces --- */
+  message = '"' + input + '" has no spaces';
 }
 //  Data After:   a message describing the user's input
 
 /* --- alert the message to the user --- */
-
 //  Data Out:     the user's message
-_;
+alert(message);

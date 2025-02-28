@@ -49,6 +49,34 @@
 //     CONTINUE
 //   :END IF
 
+let input = null;
+while (true) {
+  input = prompt('enter some text with only letters');
+  console.log(input);
+
+
+  if (input === null) {
+    continue;
+  }
+
+  if (input === '') {
+    continue;
+  }
+
+  let onlyLetters = true;
+  for (let char of input) {
+    if (!'abcdefghijklmnopqrstuvwxyz'.includes(char.toLowerCase())) {
+      onlyLetters = false;
+    }
+  }
+  if (!onlyLetters) {
+    continue;
+  }
+
+  break;
+}
+console.log(input);
+
 /* --- exit if the input passed the previous checks (sub-goal!) --- */
 //   BREAK
 // :END WHILE
@@ -68,7 +96,19 @@
 //   :END IF
 //   isBigLetter <- !isBigLetter
 // :END FOR
+let bouncy = '';
 
+let isBigLetter = false;
+for (let letter of input) {
+  if (isBigLetter) {
+    bouncy = bouncy + letter.toLocaleUpperCase();
+  } else {
+    bouncy = bouncy + letter.toLocaleLowerCase();
+  }
+  isBigLetter = !isBigLetter;
+}
+
+alert(bouncy);
 /* --- display the bouncy string --- */
 // Data Out:      a bouncy string
 

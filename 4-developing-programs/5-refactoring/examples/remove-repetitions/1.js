@@ -1,24 +1,20 @@
 'use strict';
 
 /*
-  refactor this program to use a boolean flag in the I/O loop
+  Refactor this program to use a boolean flag in the I/O loop
 */
 
 let phrase = null;
+let hasInput = false;
 
-let isValid = false;
-while (!isValid) {
+while (!hasInput) {
   phrase = prompt(
     'enter something with duplicated letters, they will be removed',
   );
-
-  if (phrase !== null) {
-    isValid = true;
-  }
+  hasInput = (phrase !== null);
 }
 
 let previous = '';
-
 let noRepetitions = '';
 for (const next of phrase) {
   if (next !== previous) {

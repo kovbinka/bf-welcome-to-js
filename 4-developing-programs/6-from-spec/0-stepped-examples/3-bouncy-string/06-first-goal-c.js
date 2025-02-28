@@ -31,14 +31,28 @@ while (true) {
   input = prompt('enter some text with only letters');
   console.log(input);
 
-  /* --- repeat if the input is null (sub-goal!) --- */
+
   if (input === null) {
     continue;
   }
-  /* --- repeat if the input is empty (sub-goal!) --- */
+
   if (input === '') {
     continue;
   }
+
+  let onlyLetters = true;
+  for (let char of input) {
+    if (!'abcdefghijklmnopqrstuvwxyz'.includes(char.toLowerCase())) {
+      onlyLetters = false;
+    }
+  }
+  if (!onlyLetters) {
+    continue;
+  }
+
+  break;
+}
+console.log(input);
   /* --- repeat if the input is only letters (sub-goal!) --- */
   //   onlyLetters <- true
   //   FOR: char OF input
@@ -51,9 +65,19 @@ while (true) {
   //   :END IF
 
   /* --- exit if the input passed the previous checks (sub-goal!) --- */
-  break;
+let bouncy = '';
+
+let isBigLetter = false;
+for (let letter of input) {
+  if (isBigLetter) {
+    bouncy = bouncy + letter.toLocaleUpperCase();
+  } else {
+    bouncy = bouncy + letter.toLocaleLowerCase();
+  }
+  isBigLetter = !isBigLetter;
 }
-console.log(input);
+
+alert(bouncy);
 
 /* --- bouncify the string --- */
 //  Data Before:  a string with only letters, upper or lower case

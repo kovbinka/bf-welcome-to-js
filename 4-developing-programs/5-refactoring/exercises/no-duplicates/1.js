@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -21,8 +19,11 @@ for (let char of mayHaveDuplicates) {
   hasNoDuplicates = hasNoDuplicates + char;
 }
 
+let finalMessage;
 if (hasNoDuplicates.length === mayHaveDuplicates.length) {
-  alert('well done!');
+  finalMessage = 'Well done';
 } else {
-  alert('too bad, try again');
+  finalMessage = 'Too bad, try again';
 }
+
+alert(finalMessage);

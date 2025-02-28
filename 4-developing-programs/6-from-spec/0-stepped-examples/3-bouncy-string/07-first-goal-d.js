@@ -75,3 +75,14 @@ console.log(input);
 // Data Out:      a bouncy string
 
 // alert(bouncy)
+let isBigLetter = false;
+for (let letter of input) {
+  if (isBigLetter) {
+    bouncy = bouncy + letter.toLocaleUpperCase();
+  } else {
+    bouncy = bouncy + letter.toLocaleLowerCase();
+  }
+  isBigLetter = !isBigLetter;
+}
+
+alert(bouncy);

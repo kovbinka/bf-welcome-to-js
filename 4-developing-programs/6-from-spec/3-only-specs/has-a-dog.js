@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* Has a Dog
@@ -25,3 +23,23 @@
       'GOdoGO'      ->  'at least one dog'
       'A fast dog.' ->  'at least one dog'
 */
+
+/* --- gather user input --- */
+let input = null;
+while (input === null) {
+  input = prompt('enter some text');
+}
+
+/* --- check if the input has "dog" (in any case) --- */
+let hasDog = input.toLowerCase().includes('dog');
+
+/* --- create a message for the user --- */
+let message;
+if (hasDog) {
+  message = 'at least one dog';
+} else {
+  message = 'no dogs';
+}
+
+/* --- display the message to the user --- */
+alert(message);

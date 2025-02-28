@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* Remove Repeats
@@ -29,17 +27,31 @@
       'abacada'     ->  '"abacada" -> "abcd"'
       'abcdefggg'   ->  '"abcdefggg" -> "abcdefg"'
       '.@@..@@.'    ->  '".@@..@@." -> ".@"'
-
 */
 
 /* --- gather user input --- */
+let input = null;
+while (input === null) {
+  input = prompt('enter some text');
+}
 
 /* --- check if the input has any repeated characters --- */
-
 //  store the string with no repeats for later
+let noRepeats = '';
+for (const char of input) {
+  if (!noRepeats.includes(char)) {
+    noRepeats = noRepeats + char;
+  }
+}
 
 /* --- create a message for the user --- */
-
 //  you can compare the input to the string without repeats
+let message;
+if (input.length === noRepeats.length) {
+  message = noRepeats; // No repeats, show original input
+} else {
+  message = '"' + input + '" -> "' + noRepeats + '"'; // Show before/after
+}
 
 /* --- display the message to the user --- */
+alert(message);

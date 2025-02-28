@@ -25,6 +25,33 @@
 /* --- gather input from the user --- */
 //  Data In:      null or a string
 //  Data After:   a non-empty string with only letters
+let input = null;
+while (true) {
+  input = prompt('enter some text with only letters');
+  console.log(input);
+
+
+  if (input === null) {
+    continue;
+  }
+
+  if (input === '') {
+    continue;
+  }
+
+  let onlyLetters = true;
+  for (let char of input) {
+    if (!'abcdefghijklmnopqrstuvwxyz'.includes(char.toLowerCase())) {
+      onlyLetters = false;
+    }
+  }
+  if (!onlyLetters) {
+    continue;
+  }
+
+  break;
+}
+console.log(input);
 
 /* --- repeat if the input is null (sub-goal!) --- */
 /* --- repeat if the input is empty (sub-goal!) --- */
@@ -34,6 +61,17 @@
 /* --- bouncify the string --- */
 //  Data Before:  a string with only letters, upper or lower case
 //  Data After:   the same letters with every other uppercase
+let bouncy = '';
 
+let isBigLetter = false;
+for (let letter of input) {
+  if (isBigLetter) {
+    bouncy = bouncy + letter.toLocaleUpperCase();
+  } else {
+    bouncy = bouncy + letter.toLocaleLowerCase();
+  }
+  isBigLetter = !isBigLetter;
+}
 /* --- display the bouncy string --- */
 // Data Out:      a bouncy string
+alert(bouncy);

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* one failing test
@@ -33,18 +31,24 @@
     'abcdef' -> 'too long'
 
 
-  --- experiments ---
+--- experiments ---
 
-   1. FAILING: 'abcd'
+  1. FAILING: 'abcd'
       EXPECT: 'perfect!'
       ACTUAL: 'too short'
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: Reorder the conditions to check for exactly 4 characters first.
+    PREDICT: The message will show 'perfect!' when the input is exactly 4 characters long.
+    IT DID: The message displayed 'too short' instead.
+    EXPLAIN: The condition `input.length <= 4` is true for all inputs with 4 or fewer characters,
+             including 'abcd'. This prevents the code from reaching the 'perfect!' case.
 
-  --- lessons learned ---
+--- lessons learned ---
+
+    - The order of conditional checks matters: more specific cases (e.g., `input.length === 4`)
+      should precede more general conditions (`<= 4` or `>= 4`).
+    - Logical conditions should be carefully planned to avoid premature matches.
+
 
 */
 

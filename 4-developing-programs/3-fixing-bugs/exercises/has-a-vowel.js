@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* has a vowel
@@ -16,18 +14,32 @@
     'aeiou' -> '"aeiou" has at least one vowel'
     'hi' -> '"hi" has at least one vowel'
 
-  --- experiments ---
+--- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING: 'hello'
+      EXPECT: '"hello" has at least one vowel'
+      ACTUAL: '"hello" has no vowels'
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: Fix the `hasAVowel` variable logic.
+    PREDICT: The message will correctly indicate when the input has vowels.
+    IT DID: The alert displayed the wrong message because `hasAVowel` was set to `false` when a vowel was found.
+    EXPLAIN: The initial value of `hasAVowel` was set to `true`, but it should be `false` initially.
+             When a vowel is found, `hasAVowel` should become `true`, not `false`.
 
-  --- lessons learned ---
+--- lessons learned ---
+
+    - Properly initialize boolean variables based on the intended logic.
+    - Be mindful of how variables are updated inside loops.
+    - The correct logic should be:
+        ```js
+        let hasAVowel = false;
+        for (const char of characters) {
+          if (vowels.includes(char)) {
+            hasAVowel = true;
+            break;
+          }
+        }
+        ```
 
 
 */

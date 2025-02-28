@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -11,21 +9,30 @@
 */
 
 let mayHaveDuplicates = null;
-while (mayHaveDuplicates === null) {
+let isValid = false;
+
+while (!isValid) {
   mayHaveDuplicates = prompt('enter something with no duplicate characters');
-}
 
-let hasNoDuplicates = '';
-for (let char of mayHaveDuplicates) {
-  let isDuplicate = hasNoDuplicates.includes(char);
-  if (isDuplicate) {
-    break;
+  if (mayHaveDuplicates === null) {
+    alert('there is no escape');
+    continue; // keep asking if user cancels
   }
-  hasNoDuplicates = hasNoDuplicates + char;
+
+  let hasNoDuplicates = '';
+  for (let char of mayHaveDuplicates) {
+    let isDuplicate = hasNoDuplicates.includes(char);
+    if (isDuplicate) {
+      alert('too bad, try again - duplicates found');
+      hasNoDuplicates = ''; // reset for next attempt
+      break;
+    }
+    hasNoDuplicates = hasNoDuplicates + char;
+  }
+
+  if (hasNoDuplicates.length === mayHaveDuplicates.length) {
+    isValid = true; // exit loop only if no duplicates
+  }
 }
 
-if (hasNoDuplicates.length === mayHaveDuplicates.length) {
-  alert('well done!');
-} else {
-  alert('too bad, try again');
-}
+alert('well done!');
