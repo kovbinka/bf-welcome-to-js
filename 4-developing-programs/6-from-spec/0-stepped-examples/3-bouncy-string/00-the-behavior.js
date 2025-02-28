@@ -21,3 +21,45 @@
       'AbCdEf' -> 'aBcDeF'
       'jElLo' -> 'jElLo'
 */
+
+let input = null;
+while (true) {
+  input = prompt('enter some text with only letters');
+  console.log(input);
+
+
+  if (input === null) {
+    continue;
+  }
+
+  if (input === '') {
+    continue;
+  }
+
+  let onlyLetters = true;
+  for (let char of input) {
+    if (!'abcdefghijklmnopqrstuvwxyz'.includes(char.toLowerCase())) {
+      onlyLetters = false;
+    }
+  }
+  if (!onlyLetters) {
+    continue;
+  }
+
+  break;
+}
+console.log(input);
+
+let bouncy = '';
+
+let isBigLetter = false;
+for (let letter of input) {
+  if (isBigLetter) {
+    bouncy = bouncy + letter.toLocaleUpperCase();
+  } else {
+    bouncy = bouncy + letter.toLocaleLowerCase();
+  }
+  isBigLetter = !isBigLetter;
+}
+
+alert(bouncy);

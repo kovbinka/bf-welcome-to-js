@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* actual behavior
@@ -39,12 +37,17 @@
       EXPECT: 'perfect!'
       ACTUAL: 'too short'
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: Change the conditions to specifically handle the exact length of 4.
+    PREDICT: If the input length is exactly 4, the message will be 'perfect!'.
+    IT DID: The message still showed 'too short' because the first condition (<= 4) was true.
+    EXPLAIN: The condition `input.length <= 4` triggers for any input of 4 characters or fewer,
+             so the code never reaches the 'perfect!' case.
 
-  --- lessons learned ---
+--- lessons learned ---
+
+    - Conditional order matters! More specific conditions should be checked before broader ones.
+    - Always test boundary values (e.g., exactly 4 characters) to catch logical errors.
+
 
 */
 

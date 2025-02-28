@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* Has Spaces
@@ -28,39 +26,30 @@
       ' a b c '       ->  '" a b c " has at least one space'
       ' h e l l o ! ' ->  '" h e l l o ! " has at least one space'
       ' Java Script ' ->  '" Java Script " has at least one space'
-
 */
 
 /* --- gather user input, any text will do --- */
-
 //  Data In:    a string or null
-
-_;
-while (_) {
-  _;
+let input = null;
+while (input === null) {
+  input = prompt('enter some text');
 }
-
 //  Data After:   the first string provided by the user
 
 /* --- declare a variable with the character(s) to search for --- */
-
 // Data Before:   nothing!  This step does not use data from a previous goal
-
-_;
-
+const searchChar = ' ';
 // Data After:    a string with the character(s) to search for
 
 /* --- check if the character(s) exist in the string --- */
-
 // Data Before:   this goal uses data from two previous goals:
 //                1) the user's input
 //                2) the characters to search for
-
-_;
-for (const _ of _) {
-  if (_) {
-    _;
-    _;
+let hasSpace = false;
+for (const char of input) {
+  if (char === searchChar) {
+    hasSpace = true;
+    break; // No need to continue once a space is found
   }
 }
 // Data After:    a boolean value
@@ -68,17 +57,15 @@ for (const _ of _) {
 //                false if the input had no spaces
 
 /* --- create a message for the user --- */
-
 // Data Before:  a boolean value representing the search results
-_;
-if (_) {
-  _;
+let message;
+if (hasSpace) {
+  message = '"' + input + '" has at least one space';
 } else {
-  _;
+  message = '"' + input + '" has no spaces';
 }
 // Data After:  a message saying if there were any spaces in the text
 
 /* --- display the message for the user --- */
-
 // Data Out:    a final message for the user
-_;
+alert(message);

@@ -27,7 +27,7 @@
 // Data After:  a non-empty string
 
 // input <- ''
-
+let input = '';
 // WHILE: true
 //   input <- prompt('enter a word')
 //   IF: input === null
@@ -38,19 +38,37 @@
 //     BREAK
 //   :END IF
 // :END WHILE
+while (input === null || input === '') {
+  input = prompt('enter a word');
+
+  if (input === null) {
+    alert('no canceling!');
+  }
+
+  if (input === ''){
+    alert('empty input is not allowed');
+  }
+}
 
 /* --- create the final message --- */
 // Data Before: a non-empty string
 // Data After:  a message describing the string as long or short
 
+let message = ' " ' + input + ' " ';
 // message <- '"' + input + '"'
 // IF: input.length >= 7
 //   message <- message + ' is a long word'
 // ELSE:
 //   message <- message + ' is a short word'
 // :END IF
+if (input.length >= 7){
+  message = message + 'is a long word';
+} else {
+  message = message + 'is a short word'
+}
+
 
 /* --- display the message for the user --- */
 // Data Out:    a message describing the string as long or short
-
+alert(message);
 // alert(message)

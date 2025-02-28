@@ -29,8 +29,9 @@ console.log(input);
 //  Data After:   the same string with an exclamation mark
 
 // output <- input + '!'
-
+let output = input + '!';
 /* --- display the string to the user --- */
 //  Data Out:  an excited string
 
 // alert(output)
+alert(output);

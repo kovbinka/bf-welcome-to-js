@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -22,9 +20,9 @@ while (true) {
     break;
   }
 
-  if (input.length < 5) {
+  if (input.length <= 3) {
     shortStrings = shortStrings + '\n- "' + input + '"';
-  } else if (input.length < 10) {
+  } else if (input.length < 6) {
     mediumStrings = mediumStrings + '\n- "' + input + '"';
   } else {
     longStrings = longStrings + '\n- "' + input + '"';

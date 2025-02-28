@@ -1,9 +1,7 @@
-// #todo
-
 'use strict';
 
 /*
-  refactor this program so it uses a `while` loop instead of a `for-of` loop
+  Refactor this program so it uses a `while` loop instead of a `for-of` loop
 */
 
 let toBeFrogged = null;
@@ -18,16 +16,17 @@ while (toBeFrogged === null) {
 
 let frogged = '';
 
-for (const character of toBeFrogged) {
+let i = 0;
+while (i < toBeFrogged.length) {
+  const character = toBeFrogged[i];
   if (character === 'f') {
     frogged = frogged + 'frog';
-    continue;
-  }
-  if (character === 'F') {
+  } else if (character === 'F') {
     frogged = frogged + 'FROG';
-    continue;
+  } else {
+    frogged = frogged + character;
   }
-  frogged = frogged + character;
+  i++;
 }
 
 alert(frogged);

@@ -75,3 +75,4 @@ for (let letter of input) {
 // Data Out:      a bouncy string
 
 // alert(bouncy)
+alert(bouncy);

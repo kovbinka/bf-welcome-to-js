@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* expected behavior
@@ -39,16 +37,23 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+--- experiments ---
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+  1. FAILING: 'abcd'
+      EXPECT: 'perfect!'
+      ACTUAL: 'too short'
 
-  --- lessons learned ---
+    TRY: Change the conditions to handle exactly 4 characters correctly.
+    PREDICT: The message will display 'perfect!' when the input is exactly 4 characters long.
+    IT DID: The message showed 'too short' instead of 'perfect!'.
+    EXPLAIN: The condition `input.length <= 4` is true for the input 'abcd' (length 4),
+             causing the code to set the message to 'too short' before checking the 'perfect!' condition.
+
+--- lessons learned ---
+
+    - Conditions should be written in the correct order to avoid premature matches.
+    - The exact match (`input.length === 4`) should be checked before broader conditions (`<= 4` or `>= 4`).
+
 
 */
 

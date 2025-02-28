@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* try something
@@ -36,18 +34,23 @@
     'abcdef' -> 'too long'
 
 
-  --- experiments ---
+--- experiments ---
 
   1. FAILING: 'abcd'
       EXPECT: 'perfect!'
-      ACTUAL: 'too short'
+      ACTUAL: 'too long'
 
-    TRY: replacing <= with < because it's also checking if the length is equal to 4
-    PREDICT: input with length 4 will not enter the first path, it will be perfect
-    IT DID: skip the first path, but went to the second instead
-    EXPLAIN: the second condition is also wrong, checking for >= 4
+    TRY: Adjust the conditions to correctly handle the exact length of 4.
+    PREDICT: When the input is 'abcd', the message will display 'perfect!'.
+    IT DID: The message displayed 'too long' instead.
+    EXPLAIN: The condition `input.length >= 4` is true for all inputs with 4 or more characters,
+             including 'abcd'. The 'perfect!' case is never reached.
 
-  --- lessons learned ---
+--- lessons learned ---
+
+    - When checking for a specific value (e.g., exactly 4 characters), use the equality check (`input.length === 4`).
+    - The order of conditions is important: handle specific cases before general comparisons.
+
 
 */
 

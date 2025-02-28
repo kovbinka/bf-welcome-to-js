@@ -1,9 +1,7 @@
-// #todo
-
 'use strict';
 
 /*
-  refactor this program to use `break`/`continue` everywhere in the I/O loop
+  Refactor this program to use `break`/`continue` in the `for-of` loop
 */
 
 let sentence = '';
@@ -30,19 +28,23 @@ while (!isValid) {
 sentence = sentence + ' ';
 
 let newSentence = '';
-
 let nextWord = '';
 for (const character of sentence) {
-  if (character === ' ') {
-    const keep = confirm(
-      'do you want to keep this word:\n\n"' + nextWord + '"',
-    );
-    if (keep) {
-      newSentence = newSentence + character + nextWord;
-    }
-    nextWord = '';
-  } else {
+  if (character !== ' ') {
     nextWord = nextWord + character;
+    continue; // Skip to the next iteration if character is not a space
+  }
+
+  const keep = confirm(
+    'do you want to keep this word:\n\n"' + nextWord + '"',
+  );
+  if (keep) {
+    newSentence = newSentence + ' ' + nextWord; // Add space before word
+  }
+  nextWord = '';
+
+  if (character === ' ' && newSentence.length > 0 && nextWord === '') {
+    break; // Exit loop if we've processed all words (last space encountered)
   }
 }
 

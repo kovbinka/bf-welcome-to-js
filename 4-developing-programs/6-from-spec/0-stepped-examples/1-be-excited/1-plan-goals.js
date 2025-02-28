@@ -17,6 +17,24 @@
 //  Data In:      a string or null
 //  Data After:   the first string the user inputs
 
+
+let input = '';
+
+while (input === null || input === ''){
+  input = prompt('type something scary ;)');
+
+  if (input === null) {
+    alert(`let's comeback`);
+    continue;
+  }
+
+  if (input !== null && input !== ''){
+    input = input + "!";
+  }
+
+  alert(input);
+}
+
 /* --- make the string excited --- */
 //  Data Before:  the user's string
 //  Data After:   the same text with an exclamation mark

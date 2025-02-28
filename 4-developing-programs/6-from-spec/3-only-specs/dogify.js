@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* Dogify
@@ -35,3 +33,24 @@
       'Do dump'     ->  'DOGo dogump'
       'dim mooD'    -> 'dogim mooDOG'
 */
+
+/* --- gather user input --- */
+let input = null;
+while (input === null) {
+  input = prompt('enter some text');
+}
+
+/* --- replace "d" with "dog" and "D" with "DOG" --- */
+let dogified = '';
+for (const char of input) {
+  if (char === 'd') {
+    dogified = dogified + 'dog';
+  } else if (char === 'D') {
+    dogified = dogified + 'DOG';
+  } else {
+    dogified = dogified + char;
+  }
+}
+
+/* --- display the result to the user --- */
+alert(dogified);

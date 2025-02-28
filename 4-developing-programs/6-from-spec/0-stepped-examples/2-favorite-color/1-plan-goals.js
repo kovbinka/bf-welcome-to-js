@@ -26,6 +26,19 @@
 // Data In:     null or a string
 // Data After:  a non-empty string
 
+
+let input = null;
+
+while(input === null || input === ''){
+  input = prompt('type something longer than 7 character');
+}
+
+if(input.length > 7){
+    alert("yep, it's a long word");
+  } else {
+    alert("no, this is too short");
+  }
+
 /* --- create the final message --- */
 // Data Before: a non-empty string
 // Data After:  a message describing the string as long or short

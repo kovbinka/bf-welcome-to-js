@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -24,7 +22,8 @@ while (true) {
   }
 
   if (input.length < 5) {
-    shortStrings = shortStrings + '\n- "' + input + '"';
+    shortStrings = `not accepted, try again`;
+    alert(shortStrings);
   } else if (input.length < 10) {
     mediumStrings = mediumStrings + '\n- "' + input + '"';
   } else {
